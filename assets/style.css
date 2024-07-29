@@ -1,0 +1,184 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%;
+    width: 80px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: width 0.3s, background-color 0.3s; /* Smooth transition for width and background color */
+    border-top-right-radius: 10px; /* Rounded corners */
+    border-bottom-right-radius: 10px; /* Rounded corners */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Expand the sidebar on hover */
+.sidebar:hover {
+    width: 200px;
+    background-color: #222; /* Slightly lighter on hover */
+}
+
+/* The navigation menu links */
+.sidebar-link {
+    padding: 10px 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: color 0.3s, padding-left 0.3s; /* Smooth transition for color and padding */
+}
+
+.sidebar-link:hover {
+    color: #f1f1f1;
+    padding-left: 16px; /* Slightly move text to the right on hover */
+}
+
+/* Icon inside sidebar link */
+.sidebar-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+/* Scale icon slightly on hover */
+.sidebar-link:hover .sidebar-icon {
+    transform: scale(1.1);
+}
+
+/* Text inside sidebar link, hidden initially */
+.sidebar-text {
+    display: none;
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+/* Display text when sidebar is hovered */
+.sidebar:hover .sidebar-text {
+    display: inline;
+    opacity: 1;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar-link:hover {
+    color: #f1f1f1;
+}
+
+.main-content {
+    position: fixed;
+    left: 80px;
+    margin-left: 5px;
+    width: calc(100% - 85px);
+    height: 100%;
+    overflow: scroll;
+    transition: left 0.3s, width 0.3s; /* Smooth transition for positioning */
+}
+
+/* Adjust the main content position when the sidebar is expanded */
+.sidebar:hover ~ .main-content {
+    left: 200px;
+    width: calc(100% - 205px);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.input-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.header {
+                background-color: #fff;
+                border: 1px solid #000; /* Black border */
+                border-radius: 10px; /* Rounded corners */
+                color: black;
+                padding: 20px;
+                text-align: center;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                margin: 20px;
+                box-sizing: border-box; /* Include padding and border in element's total width and height */
+            }
+.header-title {
+                margin: 0;
+                font-size: 2.5em;
+                color: #000;
+            }
+.header-logo {
+                width: 200px;
+                padding: 10px;
+            }
+
+.checklist-container {
+    max-height: 200px;
+    max-width: 300px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.checklist-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Adjust the number of columns as needed */
+    gap: 10px;  /* Adjust the gap between items as needed */
+}
